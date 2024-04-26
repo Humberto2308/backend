@@ -1,0 +1,183 @@
+### 1 iniciar sesion
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Humberto@correo.com",
+    "password": "12334i"
+}
+
+###2 ver mis datos
+GET http://localhost:5000/me
+
+
+### visualizacion como administrador
+###3 crear usuarios
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+ 
+ "name": "Evelin",
+ "email": "evelin@correo.com",
+ "password": "12334i",
+ "confPassword": "12334i", 
+ "role" : "Alumno"
+ 
+}
+
+### 4 ver todos los usuarios en mi APP
+GET http://localhost:5000/users
+
+
+###5 ver usuario por ID
+GET http://localhost:5000/users/dba5f59e-1f69-4570-8ae4-fb41ba22d198
+
+###6 actualizar usuario
+PATCH http://localhost:5000/users/7fc29358-9f22-4fe8-92bf-ac80a71e0940
+Content-Type: application/json
+
+{
+ 
+ "name": "Evelin",
+ "email": "evelin@correo.com",
+ "password": "",
+ "confPassword": "", 
+ "role" : "Estudiante"
+ 
+}
+
+
+### 7 eliminar usuario
+DELETE http://localhost:5000/users/7fc29358-9f22-4fe8-92bf-ac80a71e0940
+
+
+### crear clases
+POST http://localhost:5000/Classes
+Content-Type: application/json
+
+{
+ 
+ "className": "Matematicas"
+ 
+}
+
+###8 ver clases
+GET http://localhost:5000/Classes
+
+### 9 ver clases por ID
+GET http://localhost:5000/Classes/5679249c-79a9-4685-857a-0bd91be5125c
+
+### 10 Actualizar clases
+PATCH  http://localhost:5000/Classes/5679249c-79a9-4685-857a-0bd91be5125c
+Content-Type: application/json
+
+{
+ 
+ "className": "Matematicas"
+ 
+}
+
+### 11 Eliminar clases
+DELETE http://localhost:5000/Classes/5679249c-79a9-4685-857a-0bd91be5125c
+
+
+###12  crear horas
+POST http://localhost:5000/hours
+Content-Type: application/json
+
+{
+ 
+ "startTime": "04:00:00",
+ "endTime": "18:00:00"
+ 
+}
+
+
+### 2 ver horas
+GET http://localhost:5000/hours
+
+### 3 ver horas por ID
+GET http://localhost:5000/hours/fa53d513-04f1-4986-932f-73f63579cd3a
+
+
+### Actualizar horas
+PATCH  http://localhost:5000/hours/fa53d513-04f1-4986-932f-73f63579cd3a
+Content-Type: application/json
+
+{
+ 
+ "startTime": "14:00:00",
+ "endTime": "20:00:00"
+ 
+}
+
+### ELIMINAR horas
+DELETE http://localhost:5000/hours/fa53d513-04f1-4986-932f-73f63579cd3a
+
+
+### crear observaciones
+POST http://localhost:5000/observations
+Content-Type: application/json
+
+{
+ 
+ "content": "el maestro llego tarde 10 minutos"
+ 
+}
+
+### ver observaciones
+GET http://localhost:5000/observations
+
+
+### ver observaciones por id
+GET http://localhost:5000/observations/6393f17e-4a3f-43f6-a994-2019b8aabc87
+
+
+### Actualizar observaciones
+PATCH  http://localhost:5000/observations/84f51207-82bc-48cc-adb8-1699cb8a643f
+Content-Type: application/json
+
+{
+ 
+ "content": "el maestro llego tarde 10 minutos Update"
+ 
+}
+
+
+### eliminar observaciones
+DELETE http://localhost:5000/observations/84f51207-82bc-48cc-adb8-1699cb8a643f
+
+
+### crear signature
+POST http://localhost:5000/signatures
+Content-Type: application/json
+
+{
+ 
+ "signatureName": "RMZHumberto"
+ 
+}
+
+### ver signatures
+GET  http://localhost:5000/signatures
+
+
+### ver signature por id
+GET  http://localhost:5000/signatures/40ec023d-39a9-442b-9cd7-4f27ad5c8d1b
+
+
+
+### Actualizar signature
+PATCH  http://localhost:5000/signatures/ee1a2838-2011-440e-8ecd-d797c1c27bc7
+Content-Type: application/json
+
+{
+ 
+ "signatureName": "RMZHumberto Update"
+ 
+}
+
+
+### ELIMINAR observaciones por id
+DELETE http://localhost:5000/signatures/40ec023d-39a9-442b-9cd7-4f27ad5c8d1b
